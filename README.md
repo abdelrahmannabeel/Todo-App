@@ -2,7 +2,7 @@
 
 ![preview img](/preview.png)
 
-## [Project Live Reviwe](https://abdelrahmannabeel.github.io/ToDo-app/)
+## [Project Live Reviwe](https://abdelrahmannabeel.github.io/Todo-app/)
 
 ### Tools
 
