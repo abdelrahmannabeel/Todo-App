@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--=============== META ===============-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="revised" content="Sunday, Des. 17 , 2023, 10:15 am" />
+    <meta name="copyright" content="AbdelRahman Nabeel" />
+    <meta name="author" content="AbdelRahman Nabeel" />
+    <meta
+      name="description"
+      content="ToDo List Using HTML, CSS, JavaScript, SASS"
+    />
+    <meta
+      name="keywords"
+      content="ToDo List Using HTML, CSS, JavaScript, SASS "
+    />
+
+    <!--================= Icons =================-->
+    <!--=== Remixicons CSS ===-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <!--================= STYLE CSS =================-->
+
+    <!--=== Render All Elements Normally ===-->
+    <link rel="stylesheet" href="src/Libraries/normalize.css" />
+    <!--=== Main css File ===-->
+    <link rel="stylesheet" href="src/css/main.css" />
+    <!--================= Favicon =================-->
+    <link
+      rel="shortcut icon"
+      href="src/images/favicon.png"
+      type="image/x-icon"
+    />
+    <!--==================== Title ====================-->
+    <title>ToDo</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="logo">
+          <i class="ri-list-check-3"></i>
+          <p>ToDo</p>
+        </div>
+        <!-- clock -->
+        <div class="time">
+          <div class="clock">
+            <div class="hour" id="hrs">00</div>
+            <span>:</span>
+            <div class="min" id="min">00</div>
+            <span class="">:</span>
+            <div class="sec" id="sec">00</div>
+            <span class="">:</span>
+            <div class="apm" id="apm">am</div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="navber">
+      <div class="container">
+        <form action="" class="form">
+          <input type="text" id="add-task" placeholder="Add Task ..."/>
+          <button id="add-btn">Add</button>
+        </form>
+      </div>
+    </nav>
+
+    <main class="page">
+      <div class="container">
+        <section class="list">
+          <ul class="tasks-list"></ul>
+        </section>
+        <section class="quote" id="quote">
+          <div>I hope you have a great day</div>
+          <div class="actions">
+            <button id="get-advice">Get Advice</button>
+            <button class="delete-all" id="delete-all">Delete All</button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+
+    <!--==================== JS ====================-->
+    <!--=== SWIPER JS ===-->
+    <!-- <script src="src/Libraries/swiper-bundle.min.js"></script> -->
+    <!--=== Font Awesome Library  ===-->
+    <!-- <script src="src/Libraries/all.min.js"></script> -->
+    <!--=== Project Title ===-->
+    <script src="src/js/main.js"></script>
+  </body>
+</html>

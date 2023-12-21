@@ -1,0 +1,264 @@
+/* ========= Custom Font ========= */
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3rem;
+  --footer-height: 3rem;
+  /* ================== Color ==================*/
+
+  --backdrop-blur: blur(5px);
+  --backdrop-background-color: #ffffff1a;
+
+  --transition: cubic-bezier(0, 0, 0.05, 1);
+  --transition-up-down: cubic-bezier(0.71, 1.7, 0.77, 1.24);
+}
+
+/*=============== BASE ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;500;700&display=swap");
+body {
+  font-size: 1rem;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  background-color: #5a3e2b;
+  color: #5a3e2b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+svg path {
+  fill: var(--text-color);
+}
+select,
+input,
+textarea,
+button {
+  background-color: #ffebb3;
+  color: #5a3e2b;
+
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+option {
+}
+::placeholder {
+  color: #5a3e2b;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  padding-inline: 0.875rem;
+  margin-inline: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* ==== Top Header ==== */
+:is(.navber, .header) {
+  height: var(--header-height);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:is(.navber, .header) .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.center,
+.logo,
+.clock,
+.form,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.header {
+  background-color: #f4a226;
+}
+.logo {
+  gap: 0.5rem;
+  color: #5a3e2b;
+  font-weight: 700;
+}
+.logo i {
+  font-size: 2rem;
+}
+.logo p {
+  font-size: 1.5rem;
+}
+
+.clock {
+  gap: 0.5rem;
+}
+
+.clock > div {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #5a3e2b;
+}
+.clock > span {
+  font-size: 0.7rem;
+  color: #5a3e2b;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.clock .apm {
+  text-transform: uppercase;
+}
+/* ==== Header ==== */
+.navber {
+  height: var(--header-height);
+  background-color: #e5771f;
+}
+.navber .container {
+  justify-content: center;
+}
+form {
+  width: 100%;
+}
+form button {
+  background-color: #76c7ad;
+}
+.navber input {
+  width: 70%;
+}
+/* === Page === */
+.page {
+  gap: 0.5rem;
+  padding-block: 0.5rem;
+}
+.page .container {
+  height: calc(100vh - 10rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 0.5rem;
+}
+.list,
+.quote {
+  height: 100%;
+  padding: 0.75rem;
+  border-radius: 0.2rem;
+  color: #5a3e2b;
+  background-color: #76c7ad;
+}
+.list {
+  width: 70%;
+  overflow: auto;
+}
+.list::-webkit-scrollbar {
+  width: 0.5rem;
+}
+.list::-webkit-scrollbar-track {
+  background-color: white;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #e5771f;
+}
+.quote {
+  width: 30%;
+  text-align: center;
+}
+.quote div {
+  font-size: 1.3rem;
+  text-align: center;
+  height: 30%;
+  font-style: italic;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-direction: column;
+}
+.actions button {
+  font-size: 1rem;
+  width: 200px;
+}
+
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  color: #ffff;
+  background-color: #5a3e2b;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.done {
+  opacity: 0.6;
+}
+
+input[type="checkbox"] {
+  height: 1rem;
+  width: 1rem;
+  accent-color: #e5771f;
+}
+/* === footer === */
+.footer {
+  height: calc(var(--footer-height));
+  text-align: center;
+  background-color: #76c7ad;
+  text-align: center;
+  font-style: italic;
+  font-weight: 700;
+  padding: 1rem 0;
+}
