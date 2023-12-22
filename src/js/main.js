@@ -71,11 +71,16 @@ tasksList.addEventListener("click", (e) => {
 });
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("delete-all")) {
-    console.log(e.target);
-    myList = [];
-    addToPage(myList);
-    addToLocalStorage(myList);
+    const confirmed = window.confirm(
+      "Are you sure you want to delete all items"
+    );
+    if (confirmed) {
+      myList = [];
+      addToPage(myList);
+      addToLocalStorage(myList);
+    }
   }
+ 
 });
 
 function addToTasksList(taskText) {
@@ -140,7 +145,6 @@ submit.addEventListener("click", handleSubmit);
 function updateProgress() {
   const numCompleted = myList.filter((task) => task.completed).length;
   const percentCompleted = Math.round((numCompleted / myList.length) * 100);
-  console.log(percentCompleted);
   let footer = document.querySelector(".footer");
 
   if (myList.length === 0) {

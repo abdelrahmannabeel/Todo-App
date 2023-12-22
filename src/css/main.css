@@ -122,7 +122,13 @@ option {
   font-weight: 700;
 }
 .logo i {
-  font-size: 2rem;
+  /* font-size: 1.6rem; */
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #5a3e2b;
+  color: white;
 }
 .logo p {
   font-size: 1.5rem;
